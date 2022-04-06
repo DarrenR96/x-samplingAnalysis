@@ -28,7 +28,7 @@ def readYUV420PatchRange(name: str, resolution: tuple, range: tuple, upsampleUV:
     return YUV
 
 
-class hrNetDataGenerator(Sequence):
+class UNetDataGenerator(Sequence):
     def __init__(self, degradedPaths, referencePaths, frames, batch_size, dim=(192,192,3), sourceDims=(1920,1080), shuffle=True):
         self.degradedPaths = degradedPaths
         self.referencePaths = referencePaths
