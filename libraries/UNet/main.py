@@ -160,7 +160,3 @@ class UNet(keras.Model):
     def model(self):
         x = keras.Input(shape=(self.inputSize,self.inputSize,3))
         return keras.Model(inputs=[x], outputs=self.call(x))
-
-
-model = UNet().model()
-keras.utils.plot_model(model, show_shapes=True, rankdir='LR')
